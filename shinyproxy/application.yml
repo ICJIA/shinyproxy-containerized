@@ -10,12 +10,12 @@ proxy:
     - id: ucr-data-explorer
       display-name: Uniform Crime Report Data Explorer
       container-cmd: ["R", "-e", "shiny::runApp('/root/app')"]
-      container-image: icjia/ucr-data-explorer:v1.0.5
+      container-image: icjia/ucr-data-explorer
       container-network: shinyproxy-network
     - id: ucr-index-offense-explorer
       display-name: Uniform Crime Report Index Offense Explorer
       container-cmd: ["R", "-e", "shiny::runApp('/root/app')"]
-      container-image: icjia/ucr-data-explorer
+      container-image: icjia/ucr-index-offense-explorer
       container-network: shinyproxy-network
     - id: illinois-arrests-for-drugs
       display-name: Illinois Arrests for Drugs
