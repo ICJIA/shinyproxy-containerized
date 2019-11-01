@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  shinyproxy:
+    build: .
+    image: icjia/shinyproxy
+    container_name: shinyproxy
+    restart: always
+    networks:
+      shinyproxy-network:
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  shinyproxy-network:
+    name: shinyproxy-network

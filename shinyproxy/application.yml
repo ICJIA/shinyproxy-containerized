@@ -1,0 +1,37 @@
+proxy:
+  title: Apps | ICJIA
+  favicon-path: ./favicon.ico
+  port: 8080
+  authentication: none
+  hide-navbar: true
+  docker:
+    internal-networking: true
+  specs:
+    - id: ucr-data-explorer
+      display-name: Uniform Crime Report Data Explorer
+      container-cmd: ["R", "-e", "shiny::runApp('/root/app')"]
+      container-image: icjia/ucr-data-explorer:v1.0.5
+      container-network: shinyproxy-network
+    - id: ucr-index-offense-explorer
+      display-name: Uniform Crime Report Index Offense Explorer
+      container-cmd: ["R", "-e", "shiny::runApp('/root/app')"]
+      container-image: icjia/ucr-data-explorer
+      container-network: shinyproxy-network
+    - id: illinois-arrests-for-drugs
+      display-name: Illinois Arrests for Drugs
+      container-cmd: ["node", "./server"]
+      container-image: icjia/illinois-arrests-for-drugs
+      container-network: shinyproxy-network
+    - id: prison-admissions-for-drug-offenses
+      display-name: Prison Admissions for Drug Offenses
+      container-cmd: ["node", "./server"]
+      container-image: icjia/prison-admissions-for-drug-offenses
+      container-network: shinyproxy-network
+    - id: opioid-prescription-and-overdose-deaths-in-illinois
+      display-name: Opioid Prescription and Overdose Deaths in Illinois
+      container-cmd: ["node", "./server"]
+      container-image: icjia/opioid-prescription-and-overdose-deaths-in-illinois
+      container-network: shinyproxy-network
+
+logging:
+  file: shinyproxy.log
