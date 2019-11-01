@@ -27,10 +27,10 @@ proxy:
       container-cmd: ["node", "./server"]
       container-image: icjia/prison-admissions-for-drug-offenses
       container-network: shinyproxy-network
-    - id: opioid-prescription-and-overdose-deaths-in-illinois
-      display-name: Opioid Prescription and Overdose Deaths in Illinois
+    - id: opioid-prescriptions-and-overdose-deaths-in-illinois
+      display-name: Opioid Prescriptions and Overdose Deaths in Illinois
       container-cmd: ["node", "./server"]
-      container-image: icjia/opioid-prescription-and-overdose-deaths-in-illinois
+      container-image: icjia/opioid-prescriptions-and-overdose-deaths-in-illinois
       container-network: shinyproxy-network
 
 logging:
