@@ -33,7 +33,7 @@ proxy:
       container-image: icjia/opioid-prescriptions-and-overdose-deaths-in-illinois
       container-network: shinyproxy-network
     - id: violent-crime-in-illinois
-      display-name: Violent Crime in Illinois
+      display-name: Violent Crime Trends in Illinois
       container-cmd: ["node", "./server"]
       container-image: icjia/violent-crime-in-illinois:1.1
       container-network: shinyproxy-network

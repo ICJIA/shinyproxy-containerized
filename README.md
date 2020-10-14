@@ -15,7 +15,7 @@ git clone icjia/shinyproxy-containerized
 ### Bring up the stack with Docker Compose
 
 ```
-docker-compose up -d --build
+sudo docker-compose up -d --build
 ```
 
 ## Update individual apps
@@ -25,7 +25,11 @@ Updating an existing app is as simple as pulling the up-to-date image from Docke
 For example:
 
 ```
-docker pull icjia/ucr-index-offense-explorer
+sudo docker pull icjia/ucr-index-offense-explorer
+```
+
+```
+sudo docker pull icjia/violent-crime-in-illinois:1.1
 ```
 
 ## Update ShinyProxy
@@ -61,5 +65,5 @@ git pull origin master
 > Note: This will incur a short downtime.
 
 ```
-docker-compose up -d --build shinyproxy
+sudo docker-compose up -d --build shinyproxy
 ```
