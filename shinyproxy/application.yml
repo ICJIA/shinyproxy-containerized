@@ -32,10 +32,10 @@ proxy:
       container-cmd: ["node", "./server"]
       container-image: icjia/opioid-prescriptions-and-overdose-deaths-in-illinois
       container-network: shinyproxy-network
-    - id: violent-crime-in-illinois
+    - id: violent-crime-trends-in-illinois
       display-name: Violent Crime Trends in Illinois
       container-cmd: ["node", "./server"]
-      container-image: icjia/violent-crime-in-illinois:1.1
+      container-image: icjia/violent-crime-trends-in-illinois
       container-network: shinyproxy-network
 
 logging:
